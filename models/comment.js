@@ -11,10 +11,8 @@ var commentSchema = new mongoose.Schema({
         default: false 
     },
     _author: {
-        // It would be stupid to just record the author as their ID, thus, I will store both the author's ID as well as their username
         id: {
             type: mongoose.Schema.Types.ObjectId,
-            // "ref" is the model I am referring to with this ObjectId
             ref: "User"
         },
         username: String
